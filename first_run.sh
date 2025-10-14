@@ -88,6 +88,10 @@ if [ "$(which nvim)" != "$(update-alternatives --get-selections | grep 'vi' | he
   sudo update-alternatives --install /usr/bin/vi vi "$(which nvim)" 100
 fi
 
+if [ ! -f "$HOME/.local/bin/oh-my-posh" ]; then
+  curl -s https://ohmyposh.dev/install.sh | bash -s
+fi
+
 OUTDATED=("snapd" "vim" "vim-tiny")
 REMOVE=()
 for PACKAGE in "${OUTDATED[@]}"; do
