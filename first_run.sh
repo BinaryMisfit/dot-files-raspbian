@@ -33,7 +33,7 @@ if [ "$UPDATE" == "true" ]; then
   sudo DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade
 fi
 
-PACKAGES=("build-essential" "coreutils" "curl" "i2c-tools" "imagemagick")
+PACKAGES=("build-essential" "coreutils" "curl" "eza" "i2c-tools" "imagemagick")
 PACKAGES+=("indicator-cpufreq" "jq" "lm-sensors" "nodejs" "neofetch" "neovim")
 PACKAGES+=("python3" "python3-pip" "python3-pynvim" "socat" "tmux" "zsh" "zsh-antigen")
 INSTALL=()
