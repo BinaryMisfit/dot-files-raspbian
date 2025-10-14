@@ -1,0 +1,24 @@
+---
+- defaults:
+    link:
+      create: true
+      relink: true
+- clean: [ '~', '~/.config', '~/.config/nvim', '~/ssh' ]
+- link:
+    ~/.aliases: root-files/aliases
+    ~/.zsh_plugins.txt: root-files/zsh_plugins.txt
+    ~/.gitconfig: root-files/gitconfig
+    ~/.config/nvim/init.vim: config/nvim/init.vim
+    ~/.config/nvim/config.d:
+      path: config/nvim/config.d/*.vim
+      glob: true
+    ~/.ohmyposh.json: root-files/ohmyposh.json
+    ~/.ssh/config: ssh/config
+    ~/.tmux.conf: root-files/tmux.conf
+    ~/.zprofile: root-files/zprofile
+    ~/.zshrc: root-files/zshrc
+- shell:
+    - command: touch ~/.hushlogin
+      quiet: true
+    - command: exec zsh
+      quiet: true

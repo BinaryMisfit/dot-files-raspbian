@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+alias _='sudo '
+alias vi='nvim '

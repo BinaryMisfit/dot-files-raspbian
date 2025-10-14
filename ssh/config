@@ -1,0 +1,4 @@
+Host *
+  SendEnv LC_*
+
+Include ~/.ssh/*.local
