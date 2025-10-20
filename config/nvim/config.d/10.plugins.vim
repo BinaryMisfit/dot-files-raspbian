@@ -14,6 +14,7 @@ if !exists('g:vscode')
   Plug 'vim-airline/vim-airline'                        " Advanced tab and statusbar
   Plug 'ryanoasis/vim-devicons'                         " Enable file type icons
   Plug 'sheerun/vim-polyglot'                           " Syntax Highligting
+  Plug 'lambdalisue/vim-suda'                           " Sudo Override
 endif
 
 " Initialize plugins
