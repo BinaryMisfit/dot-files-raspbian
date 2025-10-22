@@ -7,6 +7,14 @@ if [ -n "$TERMINAL_EMULATOR" ]; then
   exit 0
 fi
 
-if ping -q -c1 github.com &>/dev/null; then
-  /bin/bash -c "$(curl --connect-timeout 5 -fsSL https://raw.github.com/BinaryMisfit/dot-files-ubuntu/active/update_check.sh) &>/dev/null"
+echo "$(hostname) is running $(lsb_release -d -s) with kernel $(uname -r)."
+echo -ne "Config files, checking...\r"
+if dig +short github.com &>/dev/null; then
+  if [[ -f $HOME/.dotfiles/update_check.sh ]]; then
+    source $HOME/.dotfiles/update_check.sh
+  else
+    echo -ne "\r\n"
+  fi
+else
+  echo -ne "\r\n"
 fi
