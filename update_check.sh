@@ -8,9 +8,9 @@ if [[ -d "$BASE_DIR"/.git ]]; then
     COMMAND="git -C $BASE_DIR pull --autostash --all --recurse-submodules --rebase --quiet"
     if bash -c "$COMMAND" 2>&1; then
       echo -ne "Config files, installing...\r"
-      echo -ne "\r\n"
       COMMAND="$BASE_DIR/install.sh"
       bash -c "$COMMAND" >/dev/null 2>&1
+      echo -ne "Config files, update completed.\r"
     fi
   fi
 fi
