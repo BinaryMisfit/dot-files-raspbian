@@ -1,3 +1,3 @@
 if !exists('g:vscode')
-  set background=dark
+  set background=light
 endif
