@@ -8,7 +8,7 @@ if [ -n "$TERMINAL_EMULATOR" ]; then
 fi
 
 echo "$(hostname) is running $(lsb_release -d -s) with kernel $(uname -r)."
-echo -ne "Config files, checking...\r"
+echo -ne "Config files, checking\r"
 if dig +short github.com &>/dev/null; then
   if [[ -f $HOME/.dotfiles/update_check.sh ]]; then
     source $HOME/.dotfiles/update_check.sh
