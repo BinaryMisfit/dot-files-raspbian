@@ -10,8 +10,8 @@ fi
 echo "$(hostname) is running $(lsb_release -d -s) with kernel $(uname -r)."
 echo -ne "Config files, checking\r"
 if dig +short github.com &>/dev/null; then
-  if [[ -f $HOME/.dotfiles/update_check.sh ]]; then
-    source $HOME/.dotfiles/update_check.sh
+  if [[ -f $HOME/.dotfiles/update-check.sh ]]; then
+    source $HOME/.dotfiles/update-check.sh
   else
     echo -ne "\r\n"
   fi
